@@ -111,10 +111,7 @@ class day2 {
 			}
 			else {
 				// equal. Problem area. identify possible solution.
-				// look at 2, if it is valid off of this, remove the first element and then continue, else just reject.
-				if (Math.Abs(single_line[0] - single_line[2]) > 3) continue;
-				// otherwise, we remove one element and move on also marking as damaged
-				undamaged = false;
+				checkRecursion(single_line, ascending);
 			}
 			
 
@@ -160,11 +157,66 @@ class day2 {
 			}
 		}
 
-		bool checkRecursion(List<int> thelistofints){
+        // called when there is damage.
+		bool checkRecursion(List<int> thelistofints, bool ascending){
+            
+			for (int i = 0; i < thelistofints.Count; i++){
+                // load list minus the next thing
+                List<int> modified = new List<int>();
+                
+                // try removing this iteration's id
+                for (int l = 0; l < thelistofints.Count; l++){
+                    if (l == i) continue;
+                    modified.Add(thelistofints[l]);
+                }
+                
+                // check validity
+                bool valid = true;
 
-			for (int i = 0; i < thelistofints.Count; i++)
+                for (int j = 0; j < modified.Count - 1; j++){
+
+                    // equal is bad
+                    if (modified[j] == modified [j+1]){
+                        valid = false;
+                        break;
+                    }
+
+                    if (ascending){
+                        // ascending
+                            // if we descend, this is a bad reading!
+                        if (modified[j] > modified[j + 1]){
+                            valid = false;
+                            break;
+                        } 
+                            // if the difference is more than three, bad reading!
+                        if (Math.Abs(modified[j] - modified[j + 1]) > 3) {
+                            valid = false;
+                            break;
+                        } 
+                    } 
+                    else {
+                        // descending
+                            // if we ascend this is a bad reading!
+                        if (modified[j] < modified[j + 1]){
+                            valid = false;
+                            break;
+                        } 
+                            // if the difference is more than three, bad reading!
+                        if (Math.Abs(modified[j]) - modified[j + 1] > 3){
+                            valid = false;
+                            break;
+                        } 
+                    }
+
+
+                }// end for j
+
+                if (valid) {
+                    return true;
+                }
+
+            } // end for i
 			
-
 			return false;
 		}
 
