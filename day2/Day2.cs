@@ -83,5 +83,13 @@ class day2 {
 
         Console.WriteLine($"Good reading count: {reading_count}");
 
+		//////////////////// PART TWO /////////////////////////
+		
+
+		
+
+
+
+
     }// end main
 }
