@@ -1,0 +1,14 @@
+C:\Users\xefin\Desktop\Scripts\advent2024\bin\Debug\net8.0\advent2024.exe
+C:\Users\xefin\Desktop\Scripts\advent2024\bin\Debug\net8.0\advent2024.deps.json
+C:\Users\xefin\Desktop\Scripts\advent2024\bin\Debug\net8.0\advent2024.runtimeconfig.json
+C:\Users\xefin\Desktop\Scripts\advent2024\bin\Debug\net8.0\advent2024.dll
+C:\Users\xefin\Desktop\Scripts\advent2024\bin\Debug\net8.0\advent2024.pdb
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.AssemblyInfoInputs.cache
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.AssemblyInfo.cs
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.csproj.CoreCompileInputs.cache
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.dll
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\refint\advent2024.dll
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.pdb
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\advent2024.genruntimeconfig.cache
+C:\Users\xefin\Desktop\Scripts\advent2024\obj\Debug\net8.0\ref\advent2024.dll
