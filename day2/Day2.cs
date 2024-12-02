@@ -97,81 +97,50 @@ class day2 {
 				single_line.Add(int.Parse(splitline[l]));
 			}
 
-			bool ascending = true;
-			bool undamaged = true;
-			bool good_reading = true;
-
-			// check initial
-			if (single_line[0] > single_line[1]){
-				// descending
-				ascending = false;
+			// Console.WriteLine(PrintLine(single_line));
+		
+			if(checkRecursion(single_line)){
+				// Console.WriteLine(" passed.");
+				reading_count++;
 			}
-			else if (single_line[0] < single_line[1]) {
-				// ascending
-			}
-			else {
-				// equal. Problem area. identify possible solution.
-				checkRecursion(single_line, ascending);
-			}
-			
-
-			// on this line
-			for (int j = 0; j < single_line.Count -1; j++){
-
-				// at j, we look at the next thing
-				if (ascending){
-					// look at j+1, if there's an issue. . .
-					// if j+1 descends, just get rid of it. unless we already have damage in which case break
-					if (single_line[j] > single_line[j+1]){
-						if (undamaged){
-							single_line.RemoveAt(j+1);
-							j--;
-							undamaged = false;
-						}
-						else {
-							good_reading = false;
-							break;
-						}
-					}
-					// if there is a discrepancy in value. . .
-
-
-				}
-				else {
-
-				}
-			}
-
-
-
 
 		}// end for
 
 		Console.WriteLine($"Good reading count 2: {reading_count}");
 
 
-		void PrintLine(List<int> thelist){
-			Console.WriteLine();
-			foreach (int thing in thelist){
-				Console.Write($"{thing} ");
+		string PrintLine(List<int> thelist){
+			string adder = "";
+			adder += thelist[0];
+			for (int i = 1; i < thelist.Count; i++){
+				adder += $" {thelist[i]}";
 			}
+			return adder;
 		}
 
-        // called when there is damage.
-		bool checkRecursion(List<int> thelistofints, bool ascending){
+        // checks
+		static bool checkRecursion(List<int> thelistofints){
             
-			for (int i = 0; i < thelistofints.Count; i++){
+			for (int i = 0; i < thelistofints.Count+1; i++){
                 // load list minus the next thing
                 List<int> modified = new List<int>();
                 
                 // try removing this iteration's id
-                for (int l = 0; l < thelistofints.Count; l++){
-                    if (l == i) continue;
-                    modified.Add(thelistofints[l]);
-                }
+				if (i > 0) {
+					for (int l = 0; l < thelistofints.Count; l++){
+                    	if (l == i-1) continue;
+                    	modified.Add(thelistofints[l]);
+                	}
+				}
+                
                 
                 // check validity
                 bool valid = true;
+
+				bool ascending = true;
+				if (modified.Count < 2) continue;
+				if (modified[0] > modified[1]) ascending = false;
+				if (modified[0] == modified[1]) continue;
 
                 for (int j = 0; j < modified.Count - 1; j++){
 
@@ -212,6 +181,9 @@ class day2 {
                 }// end for j
 
                 if (valid) {
+					// PrintLine(thelistofints);
+					// Console.WriteLine($"Modified to {PrintLine(modified)}");
+					// Console.WriteLine();
                     return true;
                 }
 
