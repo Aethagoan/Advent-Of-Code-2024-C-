@@ -1,6 +1,4 @@
-﻿// AIDAN ANDERSON 1 DEC 2024 :) 
-using System;
-using System.IO;
+﻿// AIDAN ANDERSON DEC 2024 :) 
 
 namespace AdventOfCode;
 
