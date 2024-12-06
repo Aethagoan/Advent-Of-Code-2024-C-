@@ -123,6 +123,7 @@ class day5 {
             Console.Write($"   {line}");
 
             var updatearray = line.Split(",");
+            bool hadtochange = false;
 
             for (int j = 1; j < updatearray.Length; j++){
 
@@ -136,6 +137,7 @@ class day5 {
                         updatearray[k] = temp;
                         j = 1;
                         Console.Write($"\n-> {string.Join(",", updatearray)}");
+                        hadtochange = true;
                         break;
                     }
 
@@ -150,7 +152,7 @@ class day5 {
             Console.Write($"\n   {string.Join(",", updatearray)}");
             Console.WriteLine();
 
-            accumulator2 += int.Parse(updatearray[updatearray.Length/2]);
+            if (hadtochange) accumulator2 += int.Parse(updatearray[updatearray.Length/2]);
 
 
         }

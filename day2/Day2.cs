@@ -2,6 +2,7 @@
 
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace AdventOfCode;
 
@@ -195,22 +196,6 @@ class day2 {
 			
 			return false;
 		}
-
-        //////////////////// PART TWO ////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         
 
