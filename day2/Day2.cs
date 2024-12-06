@@ -9,6 +9,8 @@ class day2 {
 
     static void Main() {
         
+        //////////// PART ONE ////////////////
+
         // for (int i = 0; i < lines_of_levels.Length; i++) {
         //     Console.WriteLine(lines_of_levels[i]);
         // }
@@ -82,6 +84,24 @@ class day2 {
 
 
         Console.WriteLine($"Good reading count: {reading_count}");
+
+        //////////////////// PART TWO ////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
     }// end main
 }

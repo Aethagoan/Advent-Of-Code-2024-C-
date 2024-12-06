@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = advent2024
-build_property.ProjectDir = c:\Users\xefin\Desktop\Scripts\advent2024\
+build_property.ProjectDir = c:\Users\xefin\Desktop\Scripts\Advent-of-Code-2024-Cs\day1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
